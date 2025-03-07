@@ -1,5 +1,5 @@
 {% set name = "locklib" %}
-{% set version = "0.0.16" %}
+{% set version = "0.0.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/locklib-{{ version }}.tar.gz
-  sha256: 5ff8ea178bd77a78780a2cec7b6c498b47667635a6cfa1a1a501c3a5738ca048
+  sha256: 4c84c3c3f620fe3491bb0de2333859145f36f969fe9ce8c721b291ac99714283
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
