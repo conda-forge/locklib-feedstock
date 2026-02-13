@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: locklib
-  version: 0.0.18
+  version: "0.0.20"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/locklib-${{ version }}.tar.gz
-  sha256: 2d622db4c80984d81f186acb4db33e61978ab362f4535381b313282fcef6dc5f
+  sha256: 286dfc92df9e5b29ce72eac67188b32cd94dbd6acfa2f67762bcd866ed308a10
 
 build:
   number: 0
