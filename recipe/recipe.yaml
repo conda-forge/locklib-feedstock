@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: locklib
-  version: "0.0.20"
+  version: "0.0.21"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/locklib-${{ version }}.tar.gz
-  sha256: 286dfc92df9e5b29ce72eac67188b32cd94dbd6acfa2f67762bcd866ed308a10
+  sha256: 50b50bce3450ee669354308f1ea62fddd4b6348552e17abda117afc0843a1901
 
 build:
   number: 0
@@ -30,7 +30,9 @@ tests:
       imports:
         - locklib
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Useful additions to the standard thread synchronization tools.
